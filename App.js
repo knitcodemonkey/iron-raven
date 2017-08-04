@@ -1,35 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { AppRegistry } from 'react-native';
+import Router from './Router';
 
-export default class App extends React.Component {
+export default class IronRaven extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
+    // Wait to render until we have run our common_init_app action in componentWillMount method.
     return (
-      <View style={styles.body}>
-        <View style={styles.container}>
-          <Text>This is where the music goes</Text>
-        </View>
-        <View style={styles.container}>
-          <Text>This is where the text goes</Text>
-        </View>
-        <View style={styles.container}>
-          <Text>This is where the buttons go</Text>
-        </View>
-      </View>
+      <Router />
     );
   }
 }
 
-const styles = StyleSheet.create({
-  body: {
-    margin: 20,
-    marginTop: 40,
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  container: {
-
-  },
-});
+AppRegistry.registerComponent('IronRaven', () => IronRaven);
