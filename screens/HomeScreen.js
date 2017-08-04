@@ -14,12 +14,16 @@ export default class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
-        <Text>Hello, Chat App!</Text>
-        <Button
-          onPress={() => navigate('Chat')}
-          title="Chat with Lucy"
-        />
+      <View style={styles.body}>
+        <View style={styles.container}>
+          <Text>This is where the music goes</Text>
+        </View>
+        <View style={styles.container}>
+          <Text>This is where the text goes</Text>
+        </View>
+        <View style={styles.container}>
+          <Text>This is where the buttons go</Text>
+        </View>
       </View>
     );
   }
