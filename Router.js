@@ -3,11 +3,13 @@ import { Platform } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import HomeScreen from './screens/HomeScreen';
-import ChatScreen from './screens/ChatScreen';
+import PracticeScreen from './screens/PracticeScreen';
+import TunerScreen from './screens/TunerScreen';
 
 const routeConfig = {
   Home: { screen: HomeScreen },
-  Chat: { screen: ChatScreen },
+  Practice: { screen: PracticeScreen },
+  Tuner: { screen: TunerScreen },
 };
 
 const Router = StackNavigator(routeConfig);
